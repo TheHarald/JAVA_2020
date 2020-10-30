@@ -30,6 +30,7 @@ public class Main {
         do {
             temp=scanner.nextInt();
             if(temp==-1)break;
+            if(temp==1 || temp ==0)
             integers.add(temp);
         }while (true);
 
