@@ -19,12 +19,10 @@ public class State {
         action2=b;
 
     }
-
     public void setPointers(Object o1,Object o2){
         this.pointer0 = o1;
         this.pointer1 = o2;
     }
-
 
     public Object working(int action){
         if(action==0){
