@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.Objects;
+
 public class Unit<K,V> {
     private K key;
     private V value;
@@ -34,5 +36,20 @@ public class Unit<K,V> {
                 "key=" + key +
                 ", value=" + value +
                 '}';
+    }
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Unit<?, ?> unit = (Unit<?, ?>) o;
+        return Objects.equals(key, unit.key) &&
+                Objects.equals(value, unit.value);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(key, value);
     }
 }
